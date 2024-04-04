@@ -13,17 +13,22 @@ const mainDiv = document.querySelector("main");
 const parent = document.querySelector("#top-text");
 parent.firstChild.style.color = "blue";
 
+//4. Iterate over a collection of elements to accomplish some task.
+const animalList = document.querySelectorAll('.animal')
+    
+//console.log(animalList)
+animalList.forEach((element) => {
+    //console.log(element);
+    //if (animalList.length == 4) 
+    //  i dont need above code b/c it is in the element  is in the Animal list variable.
+    element.style.border = "thick solid #000000"
+});
 
 //5. Create at least one element using createElement.
 //6.Use appendChild and/or prepend to add new elements to the DOM.
 const para = document.createElement("p");
 para.innerHTML = "Click on the Rooster to Answer";
 document.getElementById("top-text").appendChild(para);
-
-
-//8. Modify the HTML or text content of at least one element in
-// response to user interaction using innerHTML, innerText, or textContent.
-
 
 //7. Use the DocumentFragment interface or
 // HTML templating with the cloneNode method to create templated content. 
@@ -33,43 +38,36 @@ document.getElementById("top-text").appendChild(para);
   document.body.appendChild(clon);
 }
     
-//4. Iterate over a collection of elements to accomplish some task.
-const animalList = document.querySelectorAll('.animal')
-    
-console.log(animalList)
-animalList.forEach((element) => {
-    if (animalList.length == NodeList(4))document.querySelectorAll('.animal').style.border = "thick solid #0000FF"
-
-});
-
+//8. Modify the HTML or text content of at least one element in
+// response to user interaction using innerHTML, innerText, or textContent.
+//   on line 67.
 
 //9. Modify the style and/or CSS classes of an element in response to user
 // interactions using the style or classList properties.
-
 //10. Modify at least one attribute of an element in response to user interaction.
-const pigFly = document.querySelector('#pig')
-console.log(confirm)
-confirm.addEventListener('click', function(){
-    window.confirm('Pigs cant fly but they can run and swim!','click');    
+document.getElementById('pinkBtn').addEventListener("click", function () {
+    document.getElementById('pig').src = "https://media.npr.org/assets/img/2013/05/01/hires1_sq-279ebd18a38e055bcbe1e310cf85e61e142614ab.jpg";
+    this.style.backgroundColor = "#C0D6E8";
 });
 
 //11. Register at least two different event listeners and create the associated event handler functions.
 //12. Use at least two Browser Object Model (BOM) properties or methods.
 //document.querySelector('#rooster')
-document.querySelector('#rooster').addEventListener('click', function(){
+document.querySelector('#rooster').addEventListener('click', function () {
+    document.getElementById("larrySays").innerHTML = "Larry the Rooster says Cock-a-Doodle-Doo!.";
     let answer = window.prompt('How many Animal?');
-    console.log(answer);
-    console.log(animalList.length);
+    //console.log(answer);
+    //console.log(animalList.length);
     if (answer == animalList.length) {
         console.log('correct');
     }
 });
 
 const confirm = document.querySelector('#pig')
-console.log(confirm)
+//console.log(confirm)
 confirm.addEventListener('click', function(){
     window.confirm('Pigs cant fly but they can run and swim!','click');    
-});
+}); 
     
 //13. Include at least one form and/or input with HTML attribute validation.
 //  line 28 in HTML -required pattern="[Hh]orse"
