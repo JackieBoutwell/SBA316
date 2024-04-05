@@ -11,7 +11,7 @@ const mainDiv = document.querySelector("main");
 //3. Use the parent-child-sibling relationship to navigate between elements at least once
 // (firstChild, lastChild, parentNode, nextElementSibling, etc.).
 const parent = document.querySelector("#top-text");
-parent.firstChild.style.color = "blue";
+parent.firstChild.style.color = "#A34343";
 
 //4. Iterate over a collection of elements to accomplish some task.
 const animalList = document.querySelectorAll('.animal')
@@ -47,7 +47,7 @@ document.getElementById("top-text").appendChild(para);
 //10. Modify at least one attribute of an element in response to user interaction.
 document.getElementById('pinkBtn').addEventListener("click", function () {
     document.getElementById('pig').src = "https://media.npr.org/assets/img/2013/05/01/hires1_sq-279ebd18a38e055bcbe1e310cf85e61e142614ab.jpg";
-    this.style.backgroundColor = "#C0D6E8";
+    this.style.backgroundColor = "#E493B3";
 });
 
 //11. Register at least two different event listeners and create the associated event handler functions.
@@ -71,3 +71,13 @@ confirm.addEventListener('click', function(){
     
 //13. Include at least one form and/or input with HTML attribute validation.
 //  line 28 in HTML -required pattern="[Hh]orse"
+
+
+//BLOCKERS!!
+//Did not have blockers this time around. went with the requirements on the SBA and knocked them out one by one.
+// for the Broswers Object Model i was going to do a window.open() and window.close()
+//But they did not really fit into the the theme.. they seemed out of place.
+//I inncorperated a loop and that was hard to figure out what to do with that loop to accomplish a task.
+//The tasked i ended up doing was putting a border on all images.
+//line 23 is a blocker.
+
